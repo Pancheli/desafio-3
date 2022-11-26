@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/desafio-3/static/css/main.073c9b0a.css",
+    "main.css": "/desafio-3/static/css/main.893fbed2.css",
     "main.js": "/desafio-3/static/js/main.a514a258.js",
     "index.html": "/desafio-3/index.html",
-    "main.073c9b0a.css.map": "/desafio-3/static/css/main.073c9b0a.css.map",
+    "main.893fbed2.css.map": "/desafio-3/static/css/main.893fbed2.css.map",
     "main.a514a258.js.map": "/desafio-3/static/js/main.a514a258.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
+    "static/css/main.893fbed2.css",
     "static/js/main.a514a258.js"
   ]
 }
