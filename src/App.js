@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BaseColaboradores } from "./database/data";
+import { useState } from "react";
+import Colaborador from "./components/Colaborador";
+import BuscarColaborador from "./components/BuscarColaborador";
+import ListadoColaborador from "./components/ListadoColaborador";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+  const [colaboradores, setColaboradores] = useState(BaseColaboradores);
+  const [busqueda, setBusqueda] = useState("");
+
+  //Filtrado
+  let resultados = [];
+  if (!busqueda) {
+    resultados = colaboradores;
+  } else {
+    resultados = colaboradores.filter((colaborador) =>
+    colaborador.nombre
+    .toLocaleLowerCase()
+    .includes(busqueda.toLocaleLowerCase()))
+  }
+  
+  return <main className="App">
+    <BuscarColaborador
+    setBusqueda={setBusqueda} />
+    <div className="main">
+      <Colaborador colaboradores={colaboradores} setColaboradores={setColaboradores} />
+      <ListadoColaborador colaboradores={resultados} />
     </div>
-  );
+
+
+  </main>;
 }
 
 export default App;
