@@ -1,5 +1,6 @@
 .App {
-  height: 100vh;
+  height: 100%;
+  padding-bottom: 120px;
   text-align: center;
   background: #1c92d2; /* fallback for old browsers */
   background: -webkit-linear-gradient(
