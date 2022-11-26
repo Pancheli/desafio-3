@@ -11,3 +11,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ul {
+  list-style-type: none;
+}
+input {
+  border: none;
+  border-radius: 4rem;
+  padding: 6px 15px;
+}
+
+input:focus-visible {
+  outline: 2.5px solid #1c92d2;
+}
+
+.colaborador-main,
+.colaborador-container {
+  margin-top: 1.8rem;
+}
+
+form button {
+  background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+  background-size: 800% 400%;
+  padding: .8em 2em;
+  display: inline-block;
+  margin-top: .6em;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  transition: all 0.5s ease-in-out;
+  animation: gradient 10s infinite cubic-bezier(0.62, 0.28, 0.23, 0.99) both;
+  cursor: pointer;
+}
+
+form button:hover {
+  animation: gradient 2s infinite;
+  transform: scale(1.05);
+}
+
+form button:active {
+  animation: gradient 3s infinite;
+  transform: scale(0.8);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
